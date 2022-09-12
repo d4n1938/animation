@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Ani01 from "./Ani01";
 import Ani02 from "./Ani02";
+import Ani03 from "./Ani03";
 import Navigation from "./Navigation";
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       <Navigation></Navigation>
       <Ani01></Ani01>
       <Ani02></Ani02>
+      <Ani03></Ani03>
     </>
   );
 };
