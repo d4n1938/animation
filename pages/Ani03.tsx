@@ -3,7 +3,7 @@ const Ani03 = () => {
     <>
       <section>
         <div>
-          <span></span>
+          <span>aaa</span>
         </div>
       </section>
       {/* style--------------------------------------------------- */}
