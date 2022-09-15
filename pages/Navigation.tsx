@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 const Navigation = () => {
   return (
     <>
       <nav>
         <p>Navigation</p>
         <p>button</p>
+        <Link href="/">home</Link>
+        <Link href="/pages/ParallaxPage">Parallax</Link>
       </nav>
       {/* ----------------------------------------------------- */}
       <style jsx>
