@@ -1,10 +1,25 @@
+// import "https://code.jquery.com/jquery-3.6.1.js";
+import $ from "jquery";
+
 const Ani03 = () => {
+  const animation = () => {
+    $(() => {
+      $(".content").css({
+        animation: "ani1 1s ease-in-out forwards",
+      });
+    });
+  };
+
   return (
     <>
       <section>
         <div>
-          <span className="content">content</span>
-          <span className="cover">cover</span>
+          <span className="content" onMouseEnter={animation}>
+            content
+          </span>
+          <span className="cover" onMouseEnter={animation}>
+            cover
+          </span>
         </div>
       </section>
       {/* style--------------------------------------------------- */}
@@ -29,15 +44,7 @@ const Ani03 = () => {
           .cover {
             background-color: rgb(0, 170, 255);
             z-index: 1;
-          }
-          .content,
-          .cover:hover {
-            .content {
-              animation: ani1 1s ease-in-out;
-            }
-            .cover {
-              animation: ani2 1s ease-in-out;
-            }
+            animation: ani2 1s ease-in-out forwards;
           }
         }
         @keyframes ani1 {
