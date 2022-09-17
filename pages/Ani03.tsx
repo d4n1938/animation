@@ -1,14 +1,8 @@
 // import "https://code.jquery.com/jquery-3.6.1.js";
-import $ from "jquery";
+// import $ from "jquery";
 
 const Ani03 = () => {
-  const animation = () => {
-    $(() => {
-      $(".content").css({
-        animation: "ani1 1s ease-in-out forwards",
-      });
-    });
-  };
+  const animation = () => {};
 
   return (
     <>
