@@ -10,14 +10,14 @@ const Ani04 = () => {
   return (
     <>
       <section>
-        <div>aaa</div>
+        <div>animate</div>
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
         @import "../styles/functions.scss";
         section {
           @include flex-center("", 600px);
-          background-color: rgb(62, 62, 62);
+          background-color: rgb(255, 0, 0);
         }
       `}</style>
     </>
