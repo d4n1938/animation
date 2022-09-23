@@ -1,9 +1,12 @@
-import anime from "animejs";
+import { gsap } from "gsap/dist/gsap";
+import { createElement } from "react";
 
-const Ani05 = () => {
-  anime({
-    targets: "div",
-    transform: 300,
+function Ani05() {
+  const div = createElement("div");
+
+  gsap.to(div, {
+    duration: 2,
+    x: 200,
   });
   return (
     <>
@@ -27,5 +30,5 @@ const Ani05 = () => {
       `}</style>
     </>
   );
-};
+}
 export default Ani05;
