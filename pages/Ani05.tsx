@@ -1,17 +1,20 @@
-import { gsap } from "gsap/dist/gsap";
+import gsap from "gsap";
 import { createElement } from "react";
 
 function Ani05() {
-  const div = createElement("div");
+  if (process.browser) {
+    //クッキーに値をセット
+    const div = document.querySelector(".aaa");
+  }
 
-  gsap.to(div, {
+  gsap.to("div", {
     duration: 2,
     x: 200,
   });
   return (
     <>
       <section>
-        <div></div>
+        <div className="aaa"></div>
       </section>
       {/* style--------------------------------------------------- */}
 
