@@ -1,16 +1,16 @@
-import gsap from "gsap";
-import { createElement } from "react";
+import { gsap } from "gsap";
+import React, { useEffect } from "react";
 
 function Ani05() {
-  if (process.browser) {
-    //クッキーに値をセット
-    const div = document.querySelector(".aaa");
-  }
+  // react nextjsの性質上、useEffect内ではないと動かなかった
 
-  gsap.to("div", {
-    duration: 2,
-    x: 200,
+  useEffect(() => {
+    gsap.to(".aaa", {
+      duration: 2,
+      x: 200,
+    });
   });
+
   return (
     <>
       <section>
