@@ -13,22 +13,10 @@ function Ani05() {
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
   // react nextjsの性質上、useEffect内ではないと動かなかった
   useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger);
-    // gsap.to(".a", {
-    //   scrollTrigger: {
-    //     trigger: ".a",
-    //     markers: true,
-    //     toggleActions: "restart pause reverse pause",
-    //   },
-    //   x: 200,
-    //   rotation: 360,
-    //   duration: 5,
-    // });
-
     const handleWindowMouseMove = (event) => {
       setGlobalCoords({
-        x: (event.screenX + 257 - width / 2) / 16,
-        y: -(event.screenY + 973 - height / 2) / 16,
+        x: (event.screenX - width / 2) / 16,
+        y: -(event.screenY - height / 2) / 10,
       });
       console.log(globalCoords);
     };
@@ -48,15 +36,6 @@ function Ani05() {
           <div className="title">title</div>
         </div>
       </section>
-      <section>
-        <div className="a"></div>
-      </section>
-      <section>
-        <div className="a"></div>
-      </section>
-      <section>
-        <div className="a"></div>
-      </section>
       {/* style--------------------------------------------------- */}
 
       <style jsx>{`
@@ -65,13 +44,16 @@ function Ani05() {
         section {
           @include flex-center("", 800px);
           background-color: rgb(223, 223, 223);
+          perspective: 3000px;
+
           div {
             position: relative;
             width: 400px;
             height: 200px;
             background-color: red;
             transform: rotateY(${globalCoords.x}deg)
-              rotateX(${globalCoords.y}deg);
+              rotateX(${globalCoords.y}deg) translateZ(50px);
+
             .in1 {
               background-color: aqua;
               position: absolute;
@@ -91,14 +73,14 @@ function Ani05() {
               height: 50px;
             }
             .title {
-              background-color: rgba(0, 255, 72, 0.43);
               position: absolute;
+              width: 300px;
+              height: 80px;
               bottom: -20px;
-              left: -20px;
-              width: 100px;
+              left: -40px;
               z-index: 20;
-              width: 50px;
-              height: 50px;
+              font-size: 4rem;
+              background-color: rgba(0, 255, 72, 0.43);
             }
           }
         }
