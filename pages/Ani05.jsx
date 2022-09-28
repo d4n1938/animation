@@ -4,10 +4,6 @@ import React, { useEffect, useState } from "react";
 import { getWindowSize } from "./api/GetWindowSize";
 
 function Ani05() {
-  const [xPosition, setX] = useState(0);
-  const move = () => {
-    console.log("aaa");
-  };
   const { height, width } = getWindowSize();
 
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
