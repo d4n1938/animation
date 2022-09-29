@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useState } from "react";
 import { getWindowSize } from "./api/GetWindowSize";
 
@@ -48,7 +46,7 @@ function Ani05() {
             height: 200px;
             background-color: red;
             transform: rotateY(${globalCoords.x}deg)
-              rotateX(${globalCoords.y}deg) translateZ(50px);
+              rotateX(${globalCoords.y}deg) translateZ(80px);
 
             .in1 {
               background-color: aqua;
@@ -74,7 +72,7 @@ function Ani05() {
               height: 80px;
               bottom: -20px;
               left: -40px;
-              z-index: 20;
+              z-index: 200;
               font-size: 4rem;
               background-color: rgba(0, 255, 72, 0.43);
             }

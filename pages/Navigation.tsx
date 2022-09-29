@@ -6,8 +6,12 @@ const Navigation = () => {
       <nav>
         <p>Navigation</p>
         <p>button</p>
-        <Link href="/">home</Link>
-        <Link href="/pages/ParallaxPage">Parallax</Link>
+        <p>
+          <Link href="/">home</Link>
+        </p>
+        <p>
+          <Link href="/pages/ParallaxPage">Parallax</Link>
+        </p>
       </nav>
       {/* ----------------------------------------------------- */}
       <style jsx>
