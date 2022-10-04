@@ -9,8 +9,8 @@ function Ani05() {
   useEffect(() => {
     const handleWindowMouseMove = (event) => {
       setGlobalCoords({
-        x: (event.screenX - width / 2) / 16,
-        y: -(event.screenY - height / 2) / 10,
+        x: (event.clientX - width / 2) / 16,
+        y: -(event.clientY - height / 2) / 10,
       });
       console.log(globalCoords);
     };
