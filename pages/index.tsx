@@ -9,6 +9,7 @@ import Ani04 from "./Ani04";
 import Ani05 from "./Ani05";
 import Ani06 from "./Ani06";
 import Ani07 from "./Ani07";
+import Ani08 from "./Ani08";
 
 import Navigation from "./Navigation";
 
@@ -16,13 +17,14 @@ const Home: NextPage = () => {
   return (
     <>
       <Navigation></Navigation>
-      {/* <Ani01></Ani01> */}
-      {/* <Ani02></Ani02> */}
-      {/* <Ani03></Ani03> */}
-      {/* <Ani04></Ani04> */}
-      {/* <Ani05></Ani05> */}
-      <Ani06></Ani06>
-      <Ani07></Ani07>
+      {/* <Ani01></Ani01>
+      <Ani02></Ani02>
+      <Ani03></Ani03>
+      <Ani04></Ani04>
+      <Ani05></Ani05> */}
+      {/* <Ani06></Ani06> */}
+      {/* <Ani07></Ani07> */}
+      <Ani08></Ani08>
     </>
   );
 };
