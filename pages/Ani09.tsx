@@ -22,6 +22,13 @@ const Ani09 = () => {
       .to(".cube", {
         width: window.innerWidth,
       })
+      .to(
+        ".txt",
+        {
+          opacity: 1,
+        },
+        "<"
+      )
       .to(".cube", {
         height: 0,
       })
@@ -50,7 +57,9 @@ const Ani09 = () => {
       <section>
         <div className="GroundTop"></div>
         <div className="GroundBottom"></div>
-        <div className="cube"></div>
+        <div className="cube">
+          <div className="txt">Welcome</div>
+        </div>
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
@@ -80,6 +89,11 @@ const Ani09 = () => {
             @include flex-center(100px, 100px);
             transform: scale(0);
             background-color: aliceblue;
+            overflow: hidden;
+            .txt {
+              font-size: 2rem;
+              opacity: 0;
+            }
           }
         }
       `}</style>
