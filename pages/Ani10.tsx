@@ -11,12 +11,18 @@ const Ani10 = () => {
   const HoverAni = () => {
     flag = true;
     tl.play();
+
     tl.to(".hover", {
       scale: 2,
       duration: 1,
     });
+    tl.to(".hover", {
+      rotate: 90,
+      duration: 1,
+      background: "#00ea00",
+    });
     (async () => {
-      await sleep(1000);
+      await sleep(2000);
       if (flag) {
         tl.pause();
       }

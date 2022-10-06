@@ -12,6 +12,7 @@ import Ani07 from "./Ani07";
 import Ani08 from "./Ani08";
 import Ani09 from "./Ani09";
 import Ani10 from "./Ani10";
+import Ani11 from "./Ani11";
 
 import Navigation from "./Navigation";
 
@@ -28,7 +29,23 @@ const Home: NextPage = () => {
       {/* <Ani07></Ani07> */}
       {/* <Ani08></Ani08> */}
       {/* <Ani09></Ani09> */}
-      <Ani10></Ani10>
+      <section>
+        <Ani11></Ani11>
+        <Ani11></Ani11>
+        <Ani11></Ani11>
+      </section>
+
+      <style jsx>{`
+        @import "../styles/functions.scss";
+        section {
+          @include flex-center(100vw, 100vh);
+          font-size: 3rem;
+
+          z-index: 200;
+
+          background-color: rgb(59, 59, 59);
+        }
+      `}</style>
     </>
   );
 };
