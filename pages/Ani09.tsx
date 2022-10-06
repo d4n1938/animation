@@ -50,11 +50,14 @@ const Ani09 = () => {
           duration: 0.5,
         },
         "<"
-      );
+      )
+      .to("#Ani09", {
+        x: window.innerWidth,
+      });
   });
   return (
     <>
-      <section>
+      <section id="Ani09">
         <div className="GroundTop"></div>
         <div className="GroundBottom"></div>
         <div className="cube">
@@ -64,7 +67,6 @@ const Ani09 = () => {
       {/* style--------------------------------------------------- */}
       <style jsx>{`
         @import "../styles/functions.scss";
-
         section {
           @include flex-center(100vw, 100vh);
           font-size: 3rem;
