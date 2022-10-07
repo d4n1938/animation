@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@types/gsap": "^3.0.0",
+    "@types/vivus": "^0.4.4",
     "animejs": "^3.2.1",
     "framer-motion": "^7.3.5",
     "gsap": "./gsap-bonus.tgz",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.54.9"
+    "sass": "^1.54.9",
+    "vivus": "^0.4.6"
   },
   "devDependencies": {
     "@styled-jsx/plugin-sass": "^4.0.2",

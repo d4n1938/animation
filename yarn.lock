@@ -307,6 +307,11 @@
   resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.3.tgz#ff5e2f1902969d305225a047c8a0fd5c915cebef"
   integrity sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==
 
+"@types/vivus@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@types/vivus/-/vivus-0.4.4.tgz#d798db5402566d35978efaf913c25452ca2eb39d"
+  integrity sha512-eE7dV8JjjkLpTvZKQomknJssib0A1kCkC7fG1NMVSp/4Am/gjNsn9o0XtZXNmXJYHVddHbHL/M0OJIVhoVioeA==
+
 "@typescript-eslint/parser@^5.21.0":
   version "5.38.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.38.0.tgz#5a59a1ff41a7b43aacd1bb2db54f6bf1c02b2ff8"
@@ -1945,6 +1950,11 @@ use-sync-external-store@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
   integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
+
+vivus@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/vivus/-/vivus-0.4.6.tgz#60661b43d08aaa70efc1854dfd2f1583f2066608"
+  integrity sha512-q6cDPTGqw/bq9sKF2h2T6GJ9PlwAFncHq7MdaK95WTSyd/7gz//UHTZbJ3B+r8f7AhcISPTC3sv9+u65BmmFbw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

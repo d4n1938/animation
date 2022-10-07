@@ -64,6 +64,7 @@ const Ani11 = () => {
         <div className="ball3"></div>
         <div className="ball4"></div>
       </div>
+
       {/* style--------------------------------------------------- */}
       <style jsx>{`
         @import "../styles/functions.scss";

@@ -13,6 +13,7 @@ import Ani08 from "./Ani08";
 import Ani09 from "./Ani09";
 import Ani10 from "./Ani10";
 import Ani11 from "./Ani11";
+import Ani12 from "./Ani12";
 
 import Navigation from "./Navigation";
 
@@ -20,20 +21,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Navigation></Navigation>
-      <Ani01></Ani01>
-      <Ani02></Ani02>
-      {/* <Ani03></Ani03> */}
-      <Ani04></Ani04>
-      <Ani05></Ani05>
-      {/* <Ani06></Ani06> */}
-      {/* <Ani07></Ani07> */}
-      <Ani08></Ani08>
-      <Ani09></Ani09>
-      <section>
-        <Ani11></Ani11>
-        <Ani11></Ani11>
-        <Ani11></Ani11>
-      </section>
+
+      <Ani12></Ani12>
 
       <style jsx>{`
         @import "../styles/functions.scss";
