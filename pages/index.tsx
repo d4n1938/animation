@@ -14,6 +14,7 @@ import Ani09 from "./Ani09";
 import Ani10 from "./Ani10";
 import Ani11 from "./Ani11";
 import Ani12 from "./Ani12";
+import Ani13 from "./Ani13";
 
 import Navigation from "./Navigation";
 
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
     <>
       <Navigation></Navigation>
 
-      <Ani12></Ani12>
+      <Ani13></Ani13>
 
       <style jsx>{`
         @import "../styles/functions.scss";
