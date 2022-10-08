@@ -11,6 +11,9 @@ const Ani13 = () => {
         section {
           @include flex-center("", 500px);
           background-color: rgb(83, 81, 81);
+          div {
+            @include flex-center(100px, 100px) background-color: #ff00ff;
+          }
         }
       `}</style>
     </>
