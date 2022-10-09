@@ -2,7 +2,29 @@ import anime from "animejs";
 import { useEffect } from "react";
 const Ani13 = () => {
   useEffect(() => {
-    anime({ targets: ".rect", translateX: 250 });
+    anime({
+      targets: ".rect",
+      translateX: [
+        { value: 300, duration: 1000 },
+        { value: 0, duration: 1000 },
+        { value: 300, duration: 1000 },
+      ],
+      translateY: [
+        { value: 300, duration: 2000 },
+        { value: 0, duration: 1000 },
+        { value: 300, duration: 500 },
+      ],
+      borderRadius: [
+        { value: "50%", duration: 3000 },
+        { value: 0, duration: 1000 },
+        { value: "50%", duration: 500 },
+      ],
+      rotate: [
+        { value: 300, duration: 2000 },
+        { value: 0, duration: 1000 },
+        { value: 300, duration: 500 },
+      ],
+    });
   });
   return (
     <>
