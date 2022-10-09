@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import Ani11 from "./Ani11";
 import Ani12 from "./Ani12";
 import Ani13 from "./Ani13";
+import Ani14 from "./Ani14";
 
 import AniUnity10 from "./1-10/AniUnity10";
 
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
     <>
       <Navigation></Navigation>
       {/* <AniUnity10></AniUnity10> */}
+      <Ani14></Ani14>
       <Ani13></Ani13>
 
       <style jsx>{`
