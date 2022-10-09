@@ -18,7 +18,7 @@ const Ani03 = () => {
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
         div {
           @include flex-center("", 400px);
           position: relative;

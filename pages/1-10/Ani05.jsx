@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getWindowSize } from "./api/GetWindowSize";
+import { getWindowSize } from ".././api/GetWindowSize";
 
 function Ani05() {
   const { height, width } = getWindowSize();
@@ -33,7 +33,7 @@ function Ani05() {
       {/* style--------------------------------------------------- */}
 
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
 
         section {
           @include flex-center("", 800px);

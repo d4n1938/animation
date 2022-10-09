@@ -14,7 +14,7 @@ const Ani04 = () => {
 
       {/* style--------------------------------------------------- */}
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
         section {
           @include flex-center("", 600px);
           background-color: rgb(223, 223, 223);

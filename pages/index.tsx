@@ -2,19 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Ani01 from "./Ani01";
-import Ani02 from "./Ani02";
-import Ani03 from "./Ani03";
-import Ani04 from "./Ani04";
-import Ani05 from "./Ani05";
-import Ani06 from "./Ani06";
-import Ani07 from "./Ani07";
-import Ani08 from "./Ani08";
-import Ani09 from "./Ani09";
-import Ani10 from "./Ani10";
+
 import Ani11 from "./Ani11";
 import Ani12 from "./Ani12";
 import Ani13 from "./Ani13";
+
+import AniUnity10 from "./1-10/AniUnity10";
 
 import Navigation from "./Navigation";
 
@@ -22,7 +15,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Navigation></Navigation>
-
+      {/* <AniUnity10></AniUnity10> */}
       <Ani13></Ani13>
 
       <style jsx>{`

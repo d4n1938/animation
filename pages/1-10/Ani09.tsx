@@ -66,7 +66,7 @@ const Ani09 = () => {
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
         section {
           @include flex-center(100vw, 100vh);
           font-size: 3rem;

@@ -22,7 +22,7 @@ const Ani06 = () => {
       <section className="d">d</section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
 
         section {
           @include flex-center("", 100vh);

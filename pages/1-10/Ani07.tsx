@@ -15,7 +15,7 @@ const Ani06 = () => {
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
 
         section {
           @include flex-center("", "");

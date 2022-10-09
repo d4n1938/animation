@@ -10,7 +10,8 @@ const Ani02 = () => {
       {/* style--------------------------------------------------- */}
 
       <style jsx>{`
-        @import "../styles/functions.scss";
+        @import "../../styles/functions.scss";
+
         div {
           @include flex-center("", 400px);
           background-color: #cfcfcf;
