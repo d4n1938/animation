@@ -1,8 +1,13 @@
+import anime from "animejs";
+import { useEffect } from "react";
 const Ani13 = () => {
+  useEffect(() => {
+    anime({ targets: ".rect", translateX: 250 });
+  });
   return (
     <>
       <section>
-        <div></div>
+        <div className="rect"></div>
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
@@ -12,7 +17,8 @@ const Ani13 = () => {
           @include flex-center("", 500px);
           background-color: rgb(83, 81, 81);
           div {
-            @include flex-center(100px, 100px) background-color: #ff00ff;
+            @include flex-center(100px, 100px);
+            background-color: #ff00ff;
           }
         }
       `}</style>
