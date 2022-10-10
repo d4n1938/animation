@@ -17,8 +17,8 @@ const AniUnity10 = () => {
       <Ani03></Ani03>
       <Ani04></Ani04>
       <Ani05></Ani05>
-      <Ani06></Ani06>
-      <Ani07></Ani07>
+      {/* <Ani06></Ani06> */}
+      {/* <Ani07></Ani07> */}
       <Ani08></Ani08>
       <Ani09></Ani09>
       <Ani10></Ani10>

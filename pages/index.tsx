@@ -17,8 +17,8 @@ const Home: NextPage = () => {
     <>
       <Navigation></Navigation>
       {/* <AniUnity10></AniUnity10> */}
-      <Ani14></Ani14>
       <Ani13></Ani13>
+      <Ani14></Ani14>
 
       <style jsx>{`
         @import "../styles/functions.scss";
