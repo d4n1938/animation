@@ -1,49 +1,83 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import anime from "animejs";
+import { animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useUpdateEffect, useEffectOnce } from "usehooks-ts";
 
 const Ani16 = () => {
   let [divNum, setDivNum] = useState<number>(0);
   let [leftClicked, setLeftClicked] = useState<boolean>(false);
+  let [rightClicked, setRightClicked] = useState<boolean>(false);
   let childLength: number;
-  useUpdateEffect(() => {}, [divNum]);
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
+  // 初期設定
   useEffectOnce(() => {
-    childLength = contentRef.current.children.length;
+    if (contentRef.current != null) {
+      childLength = contentRef.current.children.length;
 
-    contentRef.current.children[0].className += " left";
-    contentRef.current.children[1].className += " center";
-    contentRef.current.children[2].className += " right";
-    console.log("useEffect");
+      contentRef.current.children[0].className += " left";
+      contentRef.current.children[1].className += " center";
+      contentRef.current.children[2].className += " right";
+      console.log("useEffect");
+    }
   });
+  // 左を選択時にコンテンツを右に動かす
   useUpdateEffect(() => {
-    childLength = contentRef.current.children.length;
+    anime.remove(".center");
+    if (contentRef.current != null) {
+      childLength = contentRef.current.children.length;
 
-    console.log("childLength" + childLength);
+      console.log("childLength" + childLength);
 
-    for (let i = 0; i < childLength; i++) {
-      contentRef.current.children[i].className = " jsx-2793300352";
-    }
-    if (divNum - 1 <= -1) {
-      setDivNum(childLength - 1);
-    } else {
-      setDivNum(divNum - 1);
-    }
-    console.log("divNum" + divNum);
+      for (let i = 0; i < childLength; i++) {
+        contentRef.current.children[i].className = " jsx-2793300352";
+      }
 
-    contentRef.current.children[divNum].className += " center";
-    if (divNum + 1 == childLength) {
-      contentRef.current.children[0].className += " right";
-    } else {
-      contentRef.current.children[divNum + 1].className += " right";
+      console.log("divNumLL " + divNum);
+
+      contentRef.current.children[divNum].className += " center";
+      if (divNum + 1 == childLength) {
+        contentRef.current.children[0].className += " right";
+      } else {
+        contentRef.current.children[divNum + 1].className += " right";
+      }
+      if (divNum - 1 <= -1) {
+        contentRef.current.children[childLength - 1].className += " left";
+      } else {
+        contentRef.current.children[divNum - 1].className += " left";
+      }
     }
-    if (divNum - 1 <= -1) {
-      contentRef.current.children[childLength - 1].className += " left";
-    } else {
-      contentRef.current.children[divNum - 1].className += " left";
-    }
+    anime({
+      targets: ".center",
+      translateX: 20,
+    });
   }, [leftClicked]);
+  useUpdateEffect(() => {
+    if (contentRef.current != null) {
+      childLength = contentRef.current.children.length;
+
+      console.log("childLength" + childLength);
+
+      for (let i = 0; i < childLength; i++) {
+        contentRef.current.children[i].className = " jsx-2793300352";
+      }
+
+      console.log("divNumRR " + divNum);
+
+      contentRef.current.children[divNum].className += " center";
+      if (divNum + 1 == childLength) {
+        contentRef.current.children[0].className += " right";
+      } else {
+        contentRef.current.children[divNum + 1].className += " right";
+      }
+      if (divNum - 1 <= -1) {
+        contentRef.current.children[childLength - 1].className += " left";
+      } else {
+        contentRef.current.children[divNum - 1].className += " left";
+      }
+    }
+  }, [rightClicked]);
   return (
     <>
       <section id="aaa">
@@ -59,11 +93,28 @@ const Ani16 = () => {
             onClick={() => {
               setLeftClicked(!leftClicked);
               console.log(leftClicked);
+              if (divNum - 1 <= -1) {
+                setDivNum(childLength - 1);
+              } else {
+                setDivNum(divNum - 1);
+              }
             }}
           >
             left
           </div>
-          <div>right</div>
+          <div
+            onClick={() => {
+              setRightClicked(!rightClicked);
+              console.log(rightClicked);
+              if (divNum + 1 >= childLength) {
+                setDivNum(0);
+              } else {
+                setDivNum(divNum + 1);
+              }
+            }}
+          >
+            right
+          </div>
         </div>
       </section>
       {/* style--------------------------------------------------- */}
