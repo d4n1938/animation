@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
-import { useUpdateEffect } from "usehooks-ts";
+import { useUpdateEffect, useEffectOnce } from "usehooks-ts";
 
 const Ani16 = () => {
   let [divNum, setDivNum] = useState<number>(0);
@@ -8,23 +9,39 @@ const Ani16 = () => {
   useUpdateEffect(() => {}, [divNum]);
   const contentRef = useRef(null);
 
-  useEffect(() => {
+  useEffectOnce(() => {
     childLength = contentRef.current.children.length;
-    console.log(childLength);
 
-    contentRef.current.children[0].className += " center";
-    contentRef.current.children[1].className += " right";
-    contentRef.current.children[childLength - 1].className += " left";
+    contentRef.current.children[0].className += " left";
+    contentRef.current.children[1].className += " center";
+    contentRef.current.children[2].className += " right";
     console.log("useEffect");
   });
   useUpdateEffect(() => {
+    childLength = contentRef.current.children.length;
+
+    console.log("childLength" + childLength);
+
     for (let i = 0; i < childLength; i++) {
       contentRef.current.children[i].className = " jsx-2793300352";
-      console.log(i);
-      setDivNum(divNum + 1);
-      contentRef.current.children[divNum].className += " center";
+    }
+    if (divNum - 1 <= -1) {
+      setDivNum(childLength - 1);
+    } else {
+      setDivNum(divNum - 1);
+    }
+    console.log("divNum" + divNum);
+
+    contentRef.current.children[divNum].className += " center";
+    if (divNum + 1 == childLength) {
+      contentRef.current.children[0].className += " right";
+    } else {
       contentRef.current.children[divNum + 1].className += " right";
-      contentRef.current.children[divNum + 2].className += " left";
+    }
+    if (divNum - 1 <= -1) {
+      contentRef.current.children[childLength - 1].className += " left";
+    } else {
+      contentRef.current.children[divNum - 1].className += " left";
     }
   }, [leftClicked]);
   return (
