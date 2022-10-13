@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import anime from "animejs";
 import { animate } from "framer-motion";
+import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { useUpdateEffect, useEffectOnce } from "usehooks-ts";
 
-const Ani16 = () => {
-  let [divNum, setDivNum] = useState<number>(0);
+const Ani16b = () => {
+  let [divNum, setDivNum] = useState<number>(1);
   let [leftClicked, setLeftClicked] = useState<boolean>(false);
   let [rightClicked, setRightClicked] = useState<boolean>(false);
   let childLength: number;
@@ -32,6 +33,7 @@ const Ani16 = () => {
 
       for (let i = 0; i < childLength; i++) {
         contentRef.current.children[i].className = " jsx-2793300352";
+        contentRef.current.children[i].style.cssText = " ";
       }
 
       console.log("divNumLL " + divNum);
@@ -42,16 +44,52 @@ const Ani16 = () => {
       } else {
         contentRef.current.children[divNum + 1].className += " right";
       }
+
+      if (divNum + 2 >= childLength) {
+        if (divNum + 1 >= childLength) {
+          contentRef.current.children[1].className += " rightOut";
+        } else {
+          contentRef.current.children[0].className += " rightOut";
+        }
+      } else {
+        contentRef.current.children[divNum + 2].className += " rightOut";
+      }
+
       if (divNum - 1 <= -1) {
         contentRef.current.children[childLength - 1].className += " left";
       } else {
         contentRef.current.children[divNum - 1].className += " left";
       }
     }
-    anime({
-      targets: ".center",
-      translateX: 20,
+    gsap.from(".center", {
+      x: "-80%",
+      y: "80%",
+      duration: 1,
     });
+    gsap.from(".left", {
+      opacity: 0,
+      x: "-80%",
+      y: "0%",
+      duration: 1,
+    });
+    gsap.from(".right", {
+      x: "-160%",
+      duration: 1,
+    });
+    gsap.fromTo(
+      ".rightOut",
+      {
+        display: "flex",
+        x: "515%",
+        y: "178%",
+        // backgroundColor: "rgb(30, 253, 156)",
+        duration: 1,
+      },
+      {
+        x: "650%",
+        opacity: 0,
+      }
+    );
   }, [leftClicked]);
   useUpdateEffect(() => {
     if (contentRef.current != null) {
@@ -173,4 +211,4 @@ const Ani16 = () => {
     </>
   );
 };
-export default Ani16;
+export default Ani16b;
