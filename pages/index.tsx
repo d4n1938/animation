@@ -23,12 +23,8 @@ const Home: NextPage = () => {
       {/* <Ani13></Ani13> */}
       {/* <Ani14></Ani14> */}
       {/* <Ani15></Ani15> */}
-<<<<<<< HEAD
       <Ani16></Ani16>
-=======
-      {/* <Ani16></Ani16> */}
       {/* <Ani17></Ani17> */}
->>>>>>> 67f0c4d (ff)
 
       <style jsx>{`
         @import "../styles/functions.scss";
