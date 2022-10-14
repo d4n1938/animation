@@ -15,6 +15,13 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Ani05.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/Ani05.jsx",
+    "pages/Ani16.jsx",
+    "pages/Ani16.jsx"
+  ],
   "exclude": ["node_modules"]
 }
