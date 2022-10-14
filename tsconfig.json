@@ -21,7 +21,9 @@
     "**/*.tsx",
     "pages/Ani05.jsx",
     "pages/Ani16.jsx",
-    "pages/Ani16.jsx"
+    "pages/Ani16.jsx",
+    "pages/Ani17.tsx",
+    "pages/Ani17.tsx"
   ],
   "exclude": ["node_modules"]
 }
