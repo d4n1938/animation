@@ -35,7 +35,6 @@ function Features() {
 
   let [divNum, setDivNum] = useState(1);
   let [leftClicked, setLeftClicked] = useState(false);
-  let leftRef = useRef(false);
   let [rightClicked, setRightClicked] = useState(false);
   let childLength: number;
   const contentRef = useRef<HTMLDivElement>(null);
