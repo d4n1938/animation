@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getWindowSize } from ".././api/GetWindowSize";
+import { getWindowSize } from "../api/GetWindowSize";
 
 function Ani05() {
   const { height, width } = getWindowSize();
@@ -7,7 +7,7 @@ function Ani05() {
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
   // react nextjsの性質上、useEffect内ではないと動かなかった
   useEffect(() => {
-    const handleWindowMouseMove = (event) => {
+    const handleWindowMouseMove = (event: any) => {
       setGlobalCoords({
         x: (event.clientX - width / 2) / 16,
         y: -(event.clientY - height / 2) / 10,

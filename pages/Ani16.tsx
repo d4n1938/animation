@@ -8,8 +8,8 @@ const Ani16 = () => {
   let [divNum, setDivNum] = useState(1);
   let [leftClicked, setLeftClicked] = useState(false);
   let [rightClicked, setRightClicked] = useState(false);
-  let childLength;
-  const contentRef = useRef(null);
+  let childLength: number;
+  const contentRef = useRef<HTMLDivElement>(null);
 
   // class and style reset
   const removeClasses = () => {
@@ -22,7 +22,10 @@ const Ani16 = () => {
           "leftOut",
           "rightOut"
         );
-        contentRef.current.children[i].style.cssText = " ";
+        {
+          /* @ts-ignore */
+          contentRef.current.children[i].style.cssText = " ";
+        }
       }
     }
   };
