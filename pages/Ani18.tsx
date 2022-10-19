@@ -1,14 +1,26 @@
 import anime from "animejs";
+import gsap from "gsap";
 import { useEffect } from "react";
 
 const Ani18 = () => {
   useEffect(() => {
-    anime({
-      targets: ".div",
-      rotate: 45,
-      translateX: "50%",
-      translateY: "50%",
-    });
+    // anime({
+    //   targets: ".div",
+    //   translateX: "50%",
+    //   translateY: "50%",
+    // });
+    gsap.fromTo(
+      ".div",
+      {
+        x: 1000,
+        y: -1000,
+      },
+      {
+        x: -1200,
+        y: 1200,
+        duration: 2,
+      }
+    );
   });
   return (
     <>
@@ -25,6 +37,7 @@ const Ani18 = () => {
             @include flex-center(200px, 200vh);
             transform: rotate(45deg);
             background-color: red;
+            border-radius: 50%;
           }
         }
       `}</style>
