@@ -11,6 +11,7 @@ import Ani15 from "./Ani15";
 import Ani16 from "./Ani16";
 import Ani17 from "./Ani17";
 import Ani18 from "./Ani18";
+import Ani19 from "./Ani19";
 
 import AniUnity10 from "./1-10/AniUnity10";
 
@@ -27,7 +28,8 @@ const Home: NextPage = () => {
       {/* <Ani15></Ani15> */}
       {/* <Ani16></Ani16> */}
       {/* <Ani17></Ani17> */}
-      <Ani18></Ani18>
+      {/* <Ani18></Ani18> */}
+      <Ani19></Ani19>
 
       <style jsx>{`
         @import "../styles/functions.scss";
