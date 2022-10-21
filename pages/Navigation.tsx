@@ -21,6 +21,8 @@ const Navigation = () => {
             justify-content: space-between;
             width: 100%;
             height: 50px;
+            position: relative;
+            z-index: 100000;
             align-items: center;
             color: black;
             background-color: #9b9b9b;

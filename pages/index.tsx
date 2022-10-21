@@ -36,10 +36,14 @@ const Home: NextPage = () => {
         section {
           @include flex-center(100vw, 100vh);
           font-size: 3rem;
-
-          z-index: 200;
+          position: relative;
+          z-index: 0;
 
           background-color: rgb(59, 59, 59);
+        }
+        nav {
+          position: relative;
+          z-index: 100;
         }
       `}</style>
     </>
