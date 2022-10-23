@@ -25,8 +25,11 @@ const Ani19 = () => {
   return (
     <>
       <section>
-        {/* <div>aaaaaa</div> */}
         <div className="backGround"></div>
+        <div className="backGround" style={{ background: "#ff0" }}></div>
+        <div className="backGround" style={{ background: "#0f0" }}></div>
+        <div className="backGround" style={{ background: "#0ff" }}></div>
+        <div className="backGround" style={{ background: "#00f" }}></div>
       </section>
       {/* style--------------------------------------------------- */}
       <style jsx>{`
@@ -49,9 +52,7 @@ const Ani19 = () => {
             height: 1200px;
             background-color: red;
             border-radius: 80px;
-            position: absolute;
-            bottom: 0;
-            right: 50%;
+            margin: 20px;
             transform: rotate(45deg);
             transform-origin: bottom center;
             z-index: 0;
