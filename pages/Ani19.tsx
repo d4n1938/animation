@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Power0 } from "gsap";
 import gsap from "gsap";
 
+let num: number = 3;
+
 const Ani19 = () => {
   useEffect(() => {
     // const tl = gsap.timeline({ repeat: -1 }); // はじめに初期化
@@ -25,7 +27,15 @@ const Ani19 = () => {
   return (
     <>
       <section>
-        <div className="backGround"></div>
+        {(function () {
+          const list: any = [];
+          for (let i = 0; i < 10; i++) {
+            return list.push(
+              <div className="backGround" style={{ background: "#fff" }}></div>
+            );
+          }
+          return <div>{list}</div>;
+        })()}
         <div className="backGround" style={{ background: "#ff0" }}></div>
         <div className="backGround" style={{ background: "#0f0" }}></div>
         <div className="backGround" style={{ background: "#0ff" }}></div>
