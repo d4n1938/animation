@@ -38,6 +38,7 @@ const Ani19 = () => {
         })()}
         <div className="backGround" style={{ background: "#ff0" }}></div>
         <div className="backGround" style={{ background: "#0f0" }}></div>
+        <div className="backGround" style={{ background: "#090" }}></div>
         <div className="backGround" style={{ background: "#0ff" }}></div>
         <div className="backGround" style={{ background: "#00f" }}></div>
         <div className="backGround" style={{ background: "#0aa" }}></div>
