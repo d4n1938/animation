@@ -23,12 +23,12 @@ const Home: NextPage = () => {
       {/* <Navigation></Navigation> */}
       <AniUnity10></AniUnity10>
       {/* <Ani12></Ani12> */}
-      {/* <Ani13></Ani13> */}
-      {/* <Ani14></Ani14> */}
+      <Ani13></Ani13>
+      <Ani14></Ani14>
       {/* <Ani15></Ani15> */}
-      {/* <Ani16></Ani16> */}
+      <Ani16></Ani16>
       {/* <Ani17></Ani17> */}
-      <Ani18></Ani18>
+      {/* <Ani18></Ani18> */}
       <Ani19></Ani19>
 
       <style jsx>{`

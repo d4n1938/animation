@@ -90,7 +90,7 @@ const Ani14 = () => {
             padding: 5px;
             border-radius: 20%;
             background-color: rgba(0, 0, 0, 0);
-            color: rgb(255, 255, 255);
+            color: rgb(75, 75, 75);
             border: none;
             display: flex;
             flex-direction: column;
@@ -100,7 +100,7 @@ const Ani14 = () => {
             div {
               width: 30px;
               height: 2px;
-              background-color: aliceblue;
+              background-color: rgb(164, 164, 164);
               border-radius: 2px;
             }
           }
